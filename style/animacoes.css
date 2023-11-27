@@ -1,0 +1,86 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }to {
+        opacity: 0;
+    }
+}
+
+@keyframes LtoB {
+    0% {
+        scale: 0;
+    } 40% {
+        scale: 1.1;
+    } 100% {
+        scale: 1;
+    }
+}
+
+@keyframes BtoL {
+    0% {
+        scale: 1;
+    } 40% {
+        scale: 1.1;
+    } 100% {
+        scale: 0;
+    }
+}
+
+@keyframes aparecerCima {
+    from {
+        opacity: 0;
+        transform: translate(0, -100vw);
+    } to {
+        from {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+@keyframes sumirCima {
+    from {
+        opacity: 1;
+        transform: translate(0, 0);
+    } to {
+        opacity: 0;
+        transform: translate(0, -100vw);
+    }
+}
+
+@keyframes pulsar {
+    from {
+        background-position: 0% 50%;
+      }
+      to {
+        background-position: 100% 50%;
+      }
+}
+
+@keyframes aparecerBaixo {
+    from {
+        opacity: 0;
+        transform: translate(0, 100vw);
+    } to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes sumirBaixo {
+    from {
+        opacity: 1;
+        transform: translate(0, 0vw);
+    } to {
+        opacity: 0;
+        transform: translate(0, 100vw);
+    }
+}

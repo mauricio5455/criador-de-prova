@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.centralizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerProva {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#campos {
+    background-color: rgb(233, 233, 233);
+    width: 40%;
+    height: 50%;
+    max-width: 500px;
+    padding: 15px;
+    border-radius: 15px;
+    animation: LtoB .4s ease-out;
+    border: 1.5px solid rgb(255, 245, 158);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.281)
+}
+
+.x {
+    background-color: rgba(196, 196, 196, 0.719);
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    top: 0;
+}
+
+#inputs {
+    width: 90%;
+    height: 65%;
+    max-width: 500px;
+    margin: auto;
+    padding: 5px;
+    max-height: 240px;
+    overflow: scroll;
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    overflow-y: hidden; /* Oculta a barra de rolagem vertical */
+}
+
+.inputCC {
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid rgb(194, 194, 194);
+    background-color: rgb(228, 226, 226);
+    transition: border-color 1s;
+    overflow: scroll;
+}
+
+.inputCC:focus {
+    border-color: white;
+    outline: none;
+    transition: 1s;
+}
+
+#orientacao {
+    font-family: sans-serif;
+    display: none;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+#botoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.btnDefault {
+    height: 35px;
+    width: 150px;
+    border: 1px solid rgb(97, 97, 97);
+    background-color: rgb(126, 126, 126);
+    transition:  1s;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btnDefault:hover {
+    border-color: rgb(255, 255, 255);
+    color: white;
+    background-color: rgb(153, 153, 153);
+}
+
+/* Prova */
+
+#containerProvaC {
+    position: absolute;
+    top: 0;
+    background-color: rgb(201, 201, 201);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn .4s ease-out;
+}
+
+#provaC {
+    height: 100%;
+    background-color: white;
+    width: 60%;
+    overflow: scroll;
+}
+
+#espacoNome{
+    background-color: transparent;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 1em;
+    width: 50%;
+}
+
+#miniEspaco {
+    background-color: transparent;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    height: 1em;
+    width: 5%;
+}
+
+#nomes{
+    display: flex;
+}
+
+.center {
+    text-align: center;
+}
+
+#btnDiv {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 15px 0;
+}
+
+#cabecalho {
+    margin: 15px;
+    font-family: sans-serif;
+}
+
+#cabecalho h1, h2{
+    color: gray;
+    margin: 10px 0;
+}
+
+.questao {
+    font-family: sans-serif;
+    margin-bottom: 12pt;
+    padding: 15px;
+}
+
+.enunci {
+    font-size: 12pt;
+    margin-bottom: 5pt;
+    text-align: justify;
+}
+
+.alternativa {
+    font-size: 10pt;
+    text-indent: 18pt;
+    margin-top: 2pt;
+    text-align: justify;
+}
+
+/* Criar questões */
+
+#qContainer {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+#pContainer {
+    background-color: rgb(240, 240, 240);
+    border: 1.5px solid rgb(255, 243, 134);
+    height: 90vh;
+    width: 50vw;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0px 0px 50px rgba(253, 255, 109, 0.281);
+    padding: 10px;
+    animation: aparecerBaixo .2s ease-out;
+}
+
+#iContainer {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+#add {
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.inputQ {
+    width: 100%;
+}
+
+/* Media Quiries */
+
+@media screen and (orientation: portrait) {
+    #campos {
+        width: 95%;
+        height: 60%;
+    }
+
+    #provaC {
+        width: 95%;
+    }
+
+    #pContainer {
+        width: 97%;
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    #inputs {
+        display: none;
+    }
+
+    #orientacao {
+        display: block;
+    }
+
+    #botoes {
+        display: none;
+    }
+}
+
+@media print {
+    #provaC{
+        width: 100%;
+        overflow: visible;
+    }
+
+    #btnDiv {
+        display: none;
+    }
+
+    .questao {
+        margin-left: 0;
+    }
+}
