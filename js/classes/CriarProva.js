@@ -84,8 +84,10 @@ export default class CriarProva {
         const btnQst = document.createElement('button');
         const btnVoltar = document.createElement('button');
         const btnSalvar = document.createElement('button');
-
+        const orientacao = document.createElement('div');
+        
         btnVoltar.id = 'btnVoltar';
+        orientacao.id = 'orientacaoP';
         btnSalvar.id = 'btnSalvar';
         conteierProva.id = 'containerProvaC';
         prova.id = 'provaC';
@@ -97,6 +99,7 @@ export default class CriarProva {
         btnQst.innerText = 'Adicionar Questão';
         btnSalvar.innerText = 'Salvar/Imprimir';
         btnVoltar.innerText = 'Voltar';
+        orientacao.innerHTML = '<h1>Por favor, use seu dispositivo na vertical para utilizar este site.</h1>'
         
         prova.innerHTML = `<div id="cabecalho">
         <h1>${this.prova.instituicao ? this.prova.instituicao : ''}</h1>
@@ -110,7 +113,8 @@ export default class CriarProva {
         <h2 class="center">${this.prova.materia ? this.prova.materia : ''}</h2>
       </div>`;
 
-      btnQstDiv.appendChild(btnVoltar);
+        conteierProva.appendChild(orientacao);
+        btnQstDiv.appendChild(btnVoltar);
         btnQstDiv.appendChild(btnQst);
         btnQstDiv.appendChild(btnSalvar);
         conteierProva.appendChild(prova);

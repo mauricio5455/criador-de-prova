@@ -17,6 +17,7 @@ main {
     background-color: blueviolet;
     width: 40%;
     height: 30%;
+    max-height: 500px;
     max-width: 500px;
     border-radius: 1em;
     display: flex;
