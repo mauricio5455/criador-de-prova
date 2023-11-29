@@ -1,12 +1,12 @@
 {
     "name": "Criador de provas",
     "short_name": "provas",
-    "start_url": "/",
+    "start_url": "https://mauricio5455.github.io/criador-de-prova/",
     "display": "minimal-ui",
     "background_color": "grey",
     "description": "Um simples site para criação de provas, ideal para criação de provas rápidas e sem muitos detalhes.",
     "theme_color": "grey",
-    "scope": "/",
+    "scope": "https://mauricio5455.github.io/criador-de-prova/",
     "orientation": "portrait-primary",
 
     "icons": [
